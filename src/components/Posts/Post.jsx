@@ -2,7 +2,7 @@ import React from 'react'
 import Cookies from 'js-cookie'
 import { useState,useEffect } from 'react'
 import {useNavigate} from 'react-router'
-import './post.css'
+import './Post.css'
 
 function Post() {
     const [modifiedobject,setmodifiedobject] = useState([])
