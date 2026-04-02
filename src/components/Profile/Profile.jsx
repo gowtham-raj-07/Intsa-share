@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect,useState } from 'react'
 import Cookies from 'js-cookie'
-import './Profile.css'
+import './profile.css'
 import Header from '../Header/Header'
 import { useParams } from 'react-router-dom'
 
