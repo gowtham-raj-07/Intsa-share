@@ -2,7 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import Cookies from 'js-cookie';
-import './header.css';
+import './Header.css';
 import { Link } from 'react-router-dom';
 
 const Header = ({ searchTerm, setSearchTerm, home, profile }) => {
