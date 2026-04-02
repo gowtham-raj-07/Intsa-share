@@ -1,0 +1,91 @@
+.profile-container {
+    max-width: 935px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.user-bio-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 44px;
+    gap: 40px;
+}
+.user-profile-pic {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+.user-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.username {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.socialmedia-count-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+.socialmedia-count-container p {
+    font-size: 16px;
+}
+.user-insta-id {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.user-bio {
+    font-size: 16px;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+.highlight-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 44px;
+    overflow-x: auto;
+}
+.highlight-pic {
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    padding: 3px;
+}
+.horizontal-line {
+    border-top: 1px solid var(--border-color);
+    margin: 0;
+}
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.post-heading {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 16px 0;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--text-primary);
+    margin-top: -1px;
+    margin-bottom: 10px;
+}
+.post-images-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    width: 100%;
+}
+.post-pic {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
