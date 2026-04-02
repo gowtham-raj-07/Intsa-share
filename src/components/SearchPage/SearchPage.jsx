@@ -1,14 +1,16 @@
 // SearchPage.jsx
 import React, { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import './SearchPage.css';
-import Post from '../Posts/Post'; 
 import Header from '../Header/Header.jsx';
 import Cookies from 'js-cookie';
 
 const SearchPage = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchParams] = useSearchParams();
+  const searchTerm = searchParams.get('query') || "";
   const [fetchedData, setFetchedData] = useState([])
   const token = Cookies.get("jwt_token");
+
   const search = () => {
     const url = `https://apis.ccbp.in/insta-share/posts?search=${searchTerm}`;
     const options = {
@@ -21,7 +23,6 @@ const SearchPage = () => {
     const fn = async () => {
       const response = await fetch(url, options);
       const data = await response.json(); 
-      console.log(data);
       if (response.ok){
         const result = data.posts.map((each)=>({
             id:each.post_id,
@@ -38,7 +39,6 @@ const SearchPage = () => {
             })),
             createdAt:each.created_at
         }))
-        console.log(result)
         setFetchedData(result)
       }
     };
@@ -57,7 +57,7 @@ const SearchPage = () => {
 
   return (
     <>
-      <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <Header />
 
       <div className='search-page-main-container'>
         {fetchedData.map(i=>(
